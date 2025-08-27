@@ -36,7 +36,7 @@
         .step-card {
             border-left: 4px solid #a9c1d9;
             transition: all 0.3s ease-in-out;
-            height: 100%; /* Ensure card height adjusts to its content */
+            height: 100%;
         }
         .step-card:hover {
             transform: translateY(-5px);
@@ -288,7 +288,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const marketOpportunityCtx = document.getElementById('marketOpportunityChart');
     if (marketOpportunityCtx) {
         new Chart(marketOpportunityCtx, {
-            type: 'bar',
+            type: 'pie',
             data: {
                 labels: ['단백질/다이어트', '콜라겐/뷰티', '비타민/미네랄', ['뇌 건강/', '인지개선']].map(label => wrapLabel(label, 16)),
                 datasets: [{
@@ -297,27 +297,13 @@ document.addEventListener('DOMContentLoaded', function () {
                     backgroundColor: [CHART_COLORS[3], CHART_COLORS[2], CHART_COLORS[1], CHART_COLORS[0]],
                     borderColor: 'rgba(255, 255, 255, 0.8)',
                     borderWidth: 2,
-                    borderRadius: 8,
                 }]
             },
             options: {
                 responsive: true,
                 maintainAspectRatio: false,
-                indexAxis: 'y',
-                scales: {
-                    x: {
-                        beginAtZero: true,
-                        max: 100,
-                        grid: { display: false },
-                        ticks: {
-                            callback: function(value) { return value + '%' }
-                        }
-                    },
-                    y: { grid: { display: false } }
-                },
                 plugins: {
                     ...commonPlugins,
-                    legend: { display: false },
                     title: {
                         display: true,
                         text: '건강기능식품 시장 포지셔닝',
@@ -332,41 +318,20 @@ document.addEventListener('DOMContentLoaded', function () {
     const mvpBudgetCtx = document.getElementById('mvpBudgetChart');
     if (mvpBudgetCtx) {
         new Chart(mvpBudgetCtx, {
-            type: 'radar',
+            type: 'doughnut',
             data: {
                 labels: ['원료 요거트 공급', '제품 개발/시제품', '패키지/디자인', '마케팅/홍보', '기타 운영비'].map(label => wrapLabel(label, 16)),
                 datasets: [{
                     label: '예산 배분 (단위:만원)',
                     data: [1600, 800, 400, 800, 400],
-                    backgroundColor: 'rgba(10, 44, 82, 0.5)',
-                    borderColor: '#0a2c52',
-                    pointBackgroundColor: '#0a2c52',
-                    pointBorderColor: '#fff',
-                    pointHoverBackgroundColor: '#fff',
-                    pointHoverBorderColor: '#0a2c52'
+                    backgroundColor: CHART_COLORS,
+                    borderColor: '#FFFFFF',
+                    borderWidth: 2
                 }]
             },
             options: {
                 responsive: true,
                 maintainAspectRatio: false,
-                elements: {
-                    line: { borderWidth: 3 }
-                },
-                scales: {
-                    r: {
-                        angleLines: { color: '#dce6f2' },
-                        grid: { color: '#dce6f2' },
-                        pointLabels: {
-                            color: FONT_COLOR,
-                            font: { size: 14 }
-                        },
-                        ticks: {
-                            display: false,
-                            stepSize: 400
-                        },
-                        suggestedMin: 0
-                    }
-                },
                 plugins: {
                      ...commonPlugins,
                     title: {
