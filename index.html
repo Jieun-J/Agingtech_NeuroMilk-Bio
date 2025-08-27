@@ -288,20 +288,32 @@ document.addEventListener('DOMContentLoaded', function () {
     const marketOpportunityCtx = document.getElementById('marketOpportunityChart');
     if (marketOpportunityCtx) {
         new Chart(marketOpportunityCtx, {
-            type: 'pie',
+            type: 'bar', // Change to bar chart
             data: {
-                labels: ['단백질/다이어트', '콜라겐/뷰티', '비타민/미네랄', ['뇌 건강/', '인지개선']].map(label => wrapLabel(label, 16)),
+                labels: ['단백질/다이어트', '콜라겐/뷰티', '비타민/미네랄', ['뇌 건강/', '인지개선']],
                 datasets: [{
                     label: '시장 성숙도 및 포화도',
                     data: [90, 85, 80, 20],
                     backgroundColor: [CHART_COLORS[3], CHART_COLORS[2], CHART_COLORS[1], CHART_COLORS[0]],
                     borderColor: 'rgba(255, 255, 255, 0.8)',
                     borderWidth: 2,
+                    borderRadius: 8
                 }]
             },
             options: {
                 responsive: true,
                 maintainAspectRatio: false,
+                indexAxis: 'y', // Horizontal bars
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        grid: { display: false },
+                        ticks: {
+                            callback: function(value) { return value + '%' }
+                        }
+                    },
+                    y: { grid: { display: false } }
+                },
                 plugins: {
                     ...commonPlugins,
                     title: {
@@ -318,9 +330,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const mvpBudgetCtx = document.getElementById('mvpBudgetChart');
     if (mvpBudgetCtx) {
         new Chart(mvpBudgetCtx, {
-            type: 'doughnut',
+            type: 'doughnut', // Keep as doughnut chart
             data: {
-                labels: ['원료 요거트 공급', '제품 개발/시제품', '패키지/디자인', '마케팅/홍보', '기타 운영비'].map(label => wrapLabel(label, 16)),
+                labels: ['원료 요거트 공급', '제품 개발/시제품', '패키지/디자인', '마케팅/홍보', '기타 운영비'],
                 datasets: [{
                     label: '예산 배분 (단위:만원)',
                     data: [1600, 800, 400, 800, 400],
@@ -348,32 +360,20 @@ document.addEventListener('DOMContentLoaded', function () {
     const fundingUsageCtx = document.getElementById('fundingUsageChart');
     if (fundingUsageCtx) {
         new Chart(fundingUsageCtx, {
-            type: 'bar',
+            type: 'pie', // Change to pie chart
             data: {
-                labels: ['서울대 임상', '해외 진출', '스타터 생산', '플랫폼 개발'].map(label => wrapLabel(label, 16)),
+                labels: ['서울대 임상', '해외 진출', '스타터 생산', '플랫폼 개발'],
                 datasets: [{
                     label: '투자금 활용 계획 (백만 달러)',
                     data: [1.2, 0.9, 0.6, 0.3],
-                    backgroundColor: [CHART_COLORS[0], CHART_COLORS[1], CHART_COLORS[2], CHART_COLORS[3]],
-                    borderColor: 'rgba(255, 255, 255, 0.8)',
-                    borderWidth: 2,
-                    borderRadius: 8
+                    backgroundColor: CHART_COLORS,
+                    borderColor: '#FFFFFF',
+                    borderWidth: 2
                 }]
             },
             options: {
                 responsive: true,
                 maintainAspectRatio: false,
-                indexAxis: 'y',
-                scales: {
-                    x: {
-                        beginAtZero: true,
-                        grid: { display: false },
-                        ticks: {
-                            callback: function(value) { return value + 'M' }
-                        }
-                    },
-                    y: { grid: { display: false } }
-                },
                 plugins: {
                     ...commonPlugins,
                     title: {
