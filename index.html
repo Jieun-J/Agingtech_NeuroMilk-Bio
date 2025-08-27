@@ -77,7 +77,7 @@
                     <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4 section-title">시장의 기회</h2>
                     <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-6">전 세계적인 고령화는 뇌 건강 시장의 폭발적인 성장을 이끌고 있습니다.</p>
                     <div class="text-7xl md:text-8xl font-black text-[#1a5ca1]">
-                        $300B
+                        5억
                     </div>
                     <p class="mt-2 text-md font-bold text-gray-500">글로벌 기능성 식품 시장 (2025년 예상)</p>
                 </div>
@@ -360,20 +360,32 @@ document.addEventListener('DOMContentLoaded', function () {
     const fundingUsageCtx = document.getElementById('fundingUsageChart');
     if (fundingUsageCtx) {
         new Chart(fundingUsageCtx, {
-            type: 'pie', // Change to pie chart
+            type: 'bar', // Change to bar chart
             data: {
                 labels: ['서울대 임상', '해외 진출', '스타터 생산', '플랫폼 개발'],
                 datasets: [{
                     label: '투자금 활용 계획 (백만 달러)',
                     data: [1.2, 0.9, 0.6, 0.3],
                     backgroundColor: CHART_COLORS,
-                    borderColor: '#FFFFFF',
-                    borderWidth: 2
+                    borderColor: 'rgba(255, 255, 255, 0.8)',
+                    borderWidth: 2,
+                    borderRadius: 8
                 }]
             },
             options: {
                 responsive: true,
                 maintainAspectRatio: false,
+                indexAxis: 'y', // Horizontal bars
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        grid: { display: false },
+                        ticks: {
+                            callback: function(value) { return '$' + value + 'M' }
+                        }
+                    },
+                    y: { grid: { display: false } }
+                },
                 plugins: {
                     ...commonPlugins,
                     title: {
