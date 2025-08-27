@@ -12,7 +12,7 @@
     <style>
         body {
             font-family: 'Noto Sans KR', sans-serif;
-            background-color: #f0f4f8;
+            background-color: #f5f6fa; /* 연한 회색-하늘색 톤 */
         }
         .chart-container {
             position: relative;
@@ -29,28 +29,28 @@
             }
         }
         .gradient-text {
-            background: linear-gradient(90deg, #0a2c52, #1a5ca1);
+            background: linear-gradient(90deg, #2c5282, #4c7cbf);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
         .step-card {
-            border-left: 4px solid #a9c1d9;
+            border-left: 4px solid #a0aec0;
             transition: all 0.3s ease-in-out;
             height: 100%;
         }
         .step-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            border-left-color: #0a2c52;
+            border-left-color: #2c5282;
         }
-        .hero-section {
+        .hero-section, .section-card {
             background: #ffffff;
             border-radius: 1.5rem;
             padding: 2.5rem;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
         }
         .section-title {
-            color: #0a2c52;
+            color: #2c5282; /* 네이비 블루 */
         }
     </style>
 </head>
@@ -66,29 +66,29 @@
                 데이터가 복지를 설계한다.
             </p>
             <p class="mt-2 text-lg text-gray-500 max-w-3xl mx-auto">
-                우리는 인지개선 특허 유산균 제품 <strong class="text-[#1a5ca1]">NeuroMilk Bio</strong>를 시작으로, AI 데이터 플랫폼을 통해 건강의 미래를 설계하는 **에이징테크(AgingTech)** 기업입니다.
+                우리는 인지개선 특허 유산균 제품 <strong class="text-[#2c5282]">NeuroMilk Bio</strong>를 시작으로, AI 데이터 플랫폼을 통해 건강의 미래를 설계하는 **에이징테크(AgingTech)** 기업입니다.
             </p>
         </header>
 
         <main class="space-y-20">
 
-            <section class="grid grid-cols-1 md:grid-cols-5 gap-8 items-center">
-                <div class="md:col-span-2 bg-white rounded-2xl shadow-lg p-6 md:p-10 text-center">
+            <section class="grid grid-cols-1 md:grid-cols-5 gap-8 items-center section-card">
+                <div class="md:col-span-2 text-center">
                     <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4 section-title">시장의 기회</h2>
                     <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-6">전 세계적인 고령화는 뇌 건강 시장의 폭발적인 성장을 이끌고 있습니다.</p>
-                    <div class="text-7xl md:text-8xl font-black text-[#1a5ca1]">
-                        5억
+                    <div class="text-5xl md:text-6xl font-black text-[#2c5282]">
+                        $300 Million
                     </div>
                     <p class="mt-2 text-md font-bold text-gray-500">글로벌 기능성 식품 시장 (2025년 예상)</p>
                 </div>
-                <div class="md:col-span-3 bg-white rounded-2xl shadow-lg p-6 md:p-10">
+                <div class="md:col-span-3">
                     <div class="chart-container">
                         <canvas id="marketOpportunityChart"></canvas>
                     </div>
                 </div>
             </section>
 
-            <section class="bg-white rounded-2xl shadow-lg p-6 md:p-10">
+            <section class="section-card">
                 <h2 class="text-2xl md:text-3xl font-bold text-center section-title mb-8">3단계 성장 전략: Hook → Asset → Future</h2>
                 <p class="text-lg text-center text-gray-600 max-w-3xl mx-auto mb-12">우리는 제품을 '훅(Hook)'으로 시장에 진입하여 데이터를 '자산(Asset)'으로 만들고, AI 플랫폼이라는 '미래(Future)'를 구축하는 명확한 3단계 성장 로드맵을 가지고 있습니다.</p>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
@@ -110,61 +110,61 @@
                 </div>
             </section>
             
-            <section>
+            <section class="section-card">
                 <h2 class="text-2xl md:text-3xl font-bold text-center section-title mb-12">1단계 실행 계획: 8-Step 제품화 로드맵</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
                     <div class="step-card bg-white rounded-lg shadow p-5 flex flex-col">
                         <div class="flex items-center mb-3">
-                            <div class="bg-[#dce6f2] text-[#0a2c52] rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg mr-3">1</div>
+                            <div class="bg-[#e8ebf0] text-[#2c5282] rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg mr-3">1</div>
                             <h3 class="text-lg font-bold text-gray-800">기획 및 브랜딩</h3>
                         </div>
                         <p class="text-gray-600 text-sm leading-relaxed flex-grow">타겟 시장 분석, 브랜드명(NeuroMilk Bio) 및 '브레인+바이오' 패키징 컨셉 확정</p>
                     </div>
                     <div class="step-card bg-white rounded-lg shadow p-5 flex flex-col">
                         <div class="flex items-center mb-3">
-                            <div class="bg-[#dce6f2] text-[#0a2c52] rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg mr-3">2</div>
+                            <div class="bg-[#e8ebf0] text-[#2c5282] rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg mr-3">2</div>
                             <h3 class="text-lg font-bold text-gray-800">레시피 및 시제품</h3>
                         </div>
                         <p class="text-gray-600 text-sm leading-relaxed flex-grow">OEM 목장과 협업하여 레시피를 확정하고 맛, 점도 등 품질 테스트를 완료합니다.</p>
                     </div>
                     <div class="step-card bg-white rounded-lg shadow p-5 flex flex-col">
                         <div class="flex items-center mb-3">
-                            <div class="bg-[#dce6f2] text-[#0a2c52] rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg mr-3">3</div>
+                            <div class="bg-[#e8ebf0] text-[#2c5282] rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg mr-3">3</div>
                             <h3 class="text-lg font-bold text-gray-800">생산 및 품질관리</h3>
                         </div>
                         <p class="text-gray-600 text-sm leading-relaxed flex-grow">HACCP 인증 기반의 OEM 계약을 체결하고, 안정적인 생산 시스템을 구축합니다.</p>
                     </div>
                     <div class="step-card bg-white rounded-lg shadow p-5 flex flex-col">
                         <div class="flex items-center mb-3">
-                            <div class="bg-[#dce6f2] text-[#0a2c52] rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg mr-3">4</div>
+                            <div class="bg-[#e8ebf0] text-[#2c5282] rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg mr-3">4</div>
                             <h3 class="text-lg font-bold text-gray-800">패키징 및 QR 연동</h3>
                         </div>
                         <p class="text-gray-600 text-sm leading-relaxed flex-grow">제품 패키지에 QR코드를 삽입하여 데이터 수집 플랫폼으로 연결합니다.</p>
                     </div>
                     <div class="step-card bg-white rounded-lg shadow p-5 flex flex-col">
                         <div class="flex items-center mb-3">
-                            <div class="bg-[#a9c1d9] text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg mr-3">5</div>
+                            <div class="bg-[#a0aec0] text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg mr-3">5</div>
                             <h3 class="text-lg font-bold text-gray-800">온라인 판매 및 수출</h3>
                         </div>
                         <p class="text-gray-600 text-sm leading-relaxed flex-grow">자사몰 및 스마트스토어를 통해 국내 B2C 고객을 확보하고, 2025년에는 인지유산균 프리바이오틱스 제품을 미국, 베트남, 중국에 수출하여 채널을 확장합니다.</p>
                     </div>
                     <div class="step-card bg-white rounded-lg shadow p-5 flex flex-col">
                         <div class="flex items-center mb-3">
-                            <div class="bg-[#a9c1d9] text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg mr-3">6</div>
+                            <div class="bg-[#a0aec0] text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg mr-3">6</div>
                             <h3 class="text-lg font-bold text-gray-800">유통 및 물류</h3>
                         </div>
                         <p class="text-gray-600 text-sm leading-relaxed flex-grow">정기배송 시스템을 구축하여 구독자 데이터를 관리하고 고객 클레임에 대응합니다.</p>
                     </div>
                     <div class="step-card bg-white rounded-lg shadow p-5 flex flex-col">
                         <div class="flex items-center mb-3">
-                            <div class="bg-[#a9c1d9] text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg mr-3">7</div>
+                            <div class="bg-[#a0aec0] text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg mr-3">7</div>
                             <h3 class="text-lg font-bold text-gray-800">재무/법무 구조</h3>
                         </div>
                         <p class="text-gray-600 text-sm leading-relaxed flex-grow">특허 기술료, OEM 계약 등 안정적인 사업 운영을 위한 법적, 재무적 기반을 마련합니다.</p>
                     </div>
                     <div class="step-card bg-white rounded-lg shadow p-5 flex flex-col">
                         <div class="flex items-center mb-3">
-                            <div class="bg-[#a9c1d9] text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg mr-3">8</div>
+                            <div class="bg-[#a0aec0] text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg mr-3">8</div>
                             <h3 class="text-lg font-bold text-gray-800">확장 및 후속 개발</h3>
                         </div>
                         <p class="text-gray-600 text-sm leading-relaxed flex-grow">요거트에서 스타터 파우더로 확장하고, 해외 진출 및 기능성 제품 라인을 다각화합니다.</p>
@@ -172,7 +172,7 @@
                 </div>
             </section>
 
-            <section class="bg-white rounded-2xl shadow-lg p-6 md:p-10">
+            <section class="section-card">
                 <h2 class="text-2xl md:text-3xl font-bold text-center section-title mb-8">2 & 3단계 비전: '섭취-측정-개선'의 데이터 선순환</h2>
                 <p class="text-lg text-center text-gray-600 max-w-3xl mx-auto mb-12">우리의 고객은 단순히 제품을 소비하는 것에서 그치지 않습니다. QR코드부터 시작해 최종적으로는 디지털 바이오마커와 연동되는 플랫폼을 통해 자신의 건강 개선 과정을 직접 확인하고 관리하게 됩니다.</p>
                 <div class="flex flex-col md:flex-row justify-between items-center space-y-8 md:space-y-0 md:space-x-8">
@@ -181,13 +181,13 @@
                         <h3 class="text-xl font-bold section-title mb-2">섭취 (Eat)</h3>
                         <p class="text-gray-600">뉴로밀크 제품을 섭취하고 QR코드를 통해 기록을 시작합니다.</p>
                     </div>
-                    <div class="text-4xl text-[#a9c1d9] font-bold mx-4 hidden md:block">→</div>
+                    <div class="text-4xl text-[#a0aec0] font-bold mx-4 hidden md:block">→</div>
                     <div class="flex-1 text-center">
                         <div class="text-6xl mb-4">🧠</div>
                         <h3 class="text-xl font-bold section-title mb-2">측정 (Measure)</h3>
                         <p class="text-gray-600">앱 내 인지 테스트와 뇌파 기기(리소리우스) 연동으로 건강 상태를 데이터화합니다.</p>
                     </div>
-                    <div class="text-4xl text-[#a9c1d9] font-bold mx-4 hidden md:block">→</div>
+                    <div class="text-4xl text-[#a0aec0] font-bold mx-4 hidden md:block">→</div>
                     <div class="flex-1 text-center">
                         <div class="text-6xl mb-4">💡</div>
                         <h3 class="text-xl font-bold section-title mb-2">개선 (Improve)</h3>
@@ -196,17 +196,17 @@
                 </div>
             </section>
             
-            <section class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                <div class="bg-white rounded-2xl shadow-lg p-6 md:p-10">
+            <section class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center section-card">
+                <div>
                     <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4 section-title">실행력 증명: MVP (젤라잇 콜라보)</h2>
                      <p class="text-lg text-gray-600 mb-6">4천만 원의 지원금으로 5개월 내 신제품을 출시하는 '젤라잇'과의 협업은 우리의 실행력과 IP 확장성을 증명하는 구체적인 사례입니다.</p>
                     <div class="chart-container h-80 md:h-96">
                         <canvas id="mvpBudgetChart"></canvas>
                     </div>
                 </div>
-                <div class="bg-white rounded-2xl shadow-lg p-6 md:p-10">
-                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4 section-title">성장을 위한 투자 ($3M)</h2>
-                    <p class="text-lg text-gray-600 mb-6">초기 Seed/Series A 단계에서 3백만 달러를 유치하여, IP 가치를 극대화하고 글로벌 시장 진출의 발판을 마련하고자 합니다.</p>
+                <div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4 section-title">성장을 위한 투자 ($1M)</h2>
+                    <p class="text-lg text-gray-600 mb-6">초기 Seed/Series A 단계에서 1백만 달러를 유치하여, IP 가치를 극대화하고 글로벌 시장 진출의 발판을 마련하고자 합니다.</p>
                     <div class="chart-container h-80 md:h-96">
                         <canvas id="fundingUsageChart"></canvas>
                     </div>
@@ -225,32 +225,14 @@
 <script>
 document.addEventListener('DOMContentLoaded', function () {
 
-    const FONT_COLOR = '#374151';
-    const CHART_COLORS = ['#0a2c52', '#1a5ca1', '#4a8dcf', '#7aaee0', '#a9c1d9'];
+    const FONT_COLOR = '#333333';
+    const CHART_COLORS = ['#2c5282', '#4c7cbf', '#719fe5', '#98bff9', '#c0d7ff'];
 
     Chart.defaults.color = FONT_COLOR;
     Chart.defaults.font.family = "'Noto Sans KR', sans-serif";
     Chart.defaults.font.size = 14;
     Chart.defaults.layout.padding = 20;
 
-    const wrapLabel = (str, maxWidth) => {
-        if (str.length <= maxWidth) {
-            return str;
-        }
-        const words = str.split(' ');
-        let lines = [];
-        let currentLine = '';
-        for (const word of words) {
-            if ((currentLine + word).length > maxWidth) {
-                lines.push(currentLine.trim());
-                currentLine = '';
-            }
-            currentLine += word + ' ';
-        }
-        lines.push(currentLine.trim());
-        return lines.filter(line => line.length > 0);
-    };
-    
     const tooltipTitleCallback = (tooltipItems) => {
         const item = tooltipItems[0];
         let label = item.chart.data.labels[item.dataIndex];
@@ -288,7 +270,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const marketOpportunityCtx = document.getElementById('marketOpportunityChart');
     if (marketOpportunityCtx) {
         new Chart(marketOpportunityCtx, {
-            type: 'bar', // Change to bar chart
+            type: 'bar',
             data: {
                 labels: ['단백질/다이어트', '콜라겐/뷰티', '비타민/미네랄', ['뇌 건강/', '인지개선']],
                 datasets: [{
@@ -303,7 +285,7 @@ document.addEventListener('DOMContentLoaded', function () {
             options: {
                 responsive: true,
                 maintainAspectRatio: false,
-                indexAxis: 'y', // Horizontal bars
+                indexAxis: 'y',
                 scales: {
                     x: {
                         beginAtZero: true,
@@ -330,7 +312,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const mvpBudgetCtx = document.getElementById('mvpBudgetChart');
     if (mvpBudgetCtx) {
         new Chart(mvpBudgetCtx, {
-            type: 'doughnut', // Keep as doughnut chart
+            type: 'doughnut',
             data: {
                 labels: ['원료 요거트 공급', '제품 개발/시제품', '패키지/디자인', '마케팅/홍보', '기타 운영비'],
                 datasets: [{
@@ -360,12 +342,12 @@ document.addEventListener('DOMContentLoaded', function () {
     const fundingUsageCtx = document.getElementById('fundingUsageChart');
     if (fundingUsageCtx) {
         new Chart(fundingUsageCtx, {
-            type: 'bar', // Change to bar chart
+            type: 'bar',
             data: {
                 labels: ['서울대 임상', '해외 진출', '스타터 생산', '플랫폼 개발'],
                 datasets: [{
                     label: '투자금 활용 계획 (백만 달러)',
-                    data: [1.2, 0.9, 0.6, 0.3],
+                    data: [0.4, 0.3, 0.2, 0.1],
                     backgroundColor: CHART_COLORS,
                     borderColor: 'rgba(255, 255, 255, 0.8)',
                     borderWidth: 2,
@@ -375,7 +357,7 @@ document.addEventListener('DOMContentLoaded', function () {
             options: {
                 responsive: true,
                 maintainAspectRatio: false,
-                indexAxis: 'y', // Horizontal bars
+                indexAxis: 'y',
                 scales: {
                     x: {
                         beginAtZero: true,
@@ -390,7 +372,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     ...commonPlugins,
                     title: {
                         display: true,
-                        text: '투자금($3M) 활용 계획',
+                        text: '투자금($1M) 활용 계획',
                         font: { size: 18, weight: 'bold' },
                         padding: { bottom: 20 }
                     }
